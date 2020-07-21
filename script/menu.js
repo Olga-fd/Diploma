@@ -47,15 +47,14 @@ $(function() {
 
 	const burger = $('.intro__burger-menu');
 	const mobileMenu = $('.intro__nav');
-	const tag = $('.tag-three');
+	const tag = $('.banner__tag-braces');
 	const item = $('.intro__item');
 	
 	burger.click(function() {
-
 		burger.toggleClass('close');
-    mobileMenu.toggleClass('active').animate({opacity: '1'},
-      1500, "linear");
-    tag.toggleClass('visually-hidden');
+ 		mobileMenu.toggleClass('active').animate({opacity: '1'},
+   	1500, "linear");
+  	tag.toggleClass('visually-hidden');
 
    	if (mobileMenu.hasClass('active')) {
 			disableScroll();
@@ -66,8 +65,9 @@ $(function() {
 	
 	item.click(function() {
 
-	  	mobileMenu.toggle();
-	  	burger.removeClass('close');
-	  	enableScroll();
+  	mobileMenu.toggleClass('active').animate({opacity: '1'},
+   	1500, "linear");
+  	burger.removeClass('close');
+  	enableScroll();
  	});
 });
