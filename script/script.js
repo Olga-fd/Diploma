@@ -28,6 +28,7 @@ $(document).ready(function () {
       652: {
         slidesPerView: 2,
         spaceBetween: 24,
+        initialSlide: 0,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -36,6 +37,7 @@ $(document).ready(function () {
 
       320: {
         slidesPerView: 1,
+        initialSlide: 1,
         pagination: {
           el: '.swiper-pagination',
         },
@@ -64,25 +66,49 @@ $(document).ready(function () {
 });
 
   $(function(){
-    $('.call-order').on('click', function() {
-      $('.popup-container').css('display', 'flex');   
-    });
-    $('.popup-close').on('click', function() {
-      $('.popup-container').fadeOut(600);
-      });
-    });
+    new WOW().init();
+  });
 
+
+  const popup = $('.popup-call-order');
+  const modal = $('.popup-project-order');
+  const call = $('.call-order');
+  const close = $('.popup-close');
+  const site = $('.site-order');
 
   $(function(){
-    $('.site-order').on('click', function() {
-      $('.modal-box').css('display', 'flex');   
+    call.on('click', function() {
+      popup.css('display', 'flex');   
     });
-    $('.popup-close').on('click', function() {
-      $('.modal-box').fadeOut(600);
-      });
+
+    close.on('click', function() {
+      popup.fadeOut(300);
+    });
+
+    popup.on('click', function(event) {
+      if (event.target == this) {
+        $(this).fadeOut(300);
+      };
     });
   });
 
   $(function(){
-      $('input[type="tel"]').inputmask({"mask": "+7 (999)999-99-99"}); //specifying options
+    site.on('click', function() {
+      modal.css('display', 'flex');   
+    });
+
+    close.on('click', function() {
+      modal.fadeOut(300);
+    });
+
+    modal.on('click', function(event) {
+      if (event.target == this) {
+        $(this).fadeOut(300);
+      };
+    });
   });
+
+  $(function(){
+      $('input[type="tel"]').inputmask({"mask": "+7 (999)999-99-99"});
+  });
+});

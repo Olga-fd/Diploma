@@ -2,10 +2,14 @@
 <html lang="ru">
 <head>
   <title>Дмитрий Алексеев - Frontend-разработчик и веб-верстальщик</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-500.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-700.woff2" as="font" type="font/woff2">
   <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-900.woff2" as="font" type="font/woff2">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.min.css"/>
   <link rel="stylesheet" href="css/dipstyle.css">
@@ -16,15 +20,13 @@
   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#ffffff">
-  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <base target="_blank"> -->
   <script defer src="script/jquery-3.4.1.min.js"></script>
 	<script defer src="script/modernizr-custom.js"></script>
   <script defer src="script/swiper.min.js"></script>
-  <script defer src="script/fireworks.js"></script>
-  <script src="script/wow.min.js"></script>
+  <script defer src="script/fireworks.min.js"></script>
+  <script defer src="script/wow.min.js"></script>
   <script defer src="script/jquery.inputmask.min.js"></script>
   <script defer src="script/script.js"></script>
   <script defer src="script/menu.js"></script>
@@ -32,60 +34,6 @@
 
 <body>
   <header>
-    <div class="popup-container">
-      <form class="popup-form animate__animated animate__backInDown" method="post" action="mail.php">
-        <fieldset>
-          <legend>Заказать звонок</legend>
-          <ul class="popup-list" role="none">
-            <li class="popup-item">
-              <input class="popup-input" type="text" name="name" placeholder="Ваше имя" required>
-            </li>
-
-            <li class="popup-item">
-              <input class="popup-input" type="tel" name="phone" placeholder="Ваш номер телефона" required>
-            </li>
-          </ul>
-          <div class="popup-tag-box">
-            <span class="tag-hash">#</span>
-            <span class="tag-form">&lt;form&gt;</span>
-          </div>
-          <button type="submit" value="Отправить" class="popup-center-btn main-button popup-main-button">
-            Отправить
-          </button>
-        </fieldset>
-        <button type="reset" class="popup-close" aria-label="Закрыть"></button>
-      </form>
-    </div>
-
-    <div class="modal-box">
-      <form class="popup-form animate__animated animate__backInDown" method="post" action="mail.php">
-        <button type="reset" class="popup-close" aria-label="Закрыть"></button>
-        <fieldset>
-          <legend>Заказать сайт</legend>
-          <ul class="popup-list" role="none">
-            <li class="popup-item">
-              <input class="popup-input" type="text" name="name" placeholder="Ваше имя" required>
-            </li>
-
-            <li class="popup-item">
-              <input class="popup-input" type="tel" name="phone" placeholder="Ваш номер телефона" required>
-            </li>
-            
-            <li class="popup-item">
-              <input class="popup-input" type="email" name="email" placeholder="Ваша эл. почта">
-            </li>
-           </ul>
-          <div class="popup-tag-box">
-            <span class="tag-hash">#</span>
-            <span class="tag-form">&lt;form&gt;</span>
-          </div>
-          <button type="submit" value="Отправить" aria-label="Отправить" class="popup-center-btn main-button popup-main-button">
-            Отправить
-          </button>
-        </fieldset>
-      </form>
-    </div>
-    
     <div class="intro">
       <div class="intro__top-panel fixed-container flex-container">
         <button class="intro__burger-menu" data-type="tags" aria-label="Меню"></button>
@@ -105,8 +53,8 @@
         </nav>    
 
         <div class="intro__tel-button flex-container">
-          <a class="intro__tel" href="tel:+74999955555">+7 (499) 995-55-55</a>
-          <button class="intro__phone call-order fas fa-phone" aria-label="Заказать звонок"></button>
+          <a class="intro__tel" href="tel:+74999955555">+7 (499) 995-55-77</a>
+          <button class="intro__phone call-order fa fa-phone" aria-label="Заказать звонок"></button>
           <button class="call-order intro__transparent-button transparent-button" aria-label="Заказать звонок">Заказать звонок</button>
         </div> 
       </div>
@@ -253,36 +201,101 @@
       
       <ul class="footer__contacts">
         <li class="footer__contact-item">
-          <i class="footer__icon footer__fas fas fa-phone"></i>
-          <a class="footer__contact-link footer__tel" href="tel:+74999955555" aria-label="Позвонить по телефону" >+7 (499) 995-55-55</a>
+          <i class="footer__icon footer__fa fa fa-phone"></i>
+          <a class="footer__contact-link footer__tel" href="tel:+74999955555" aria-label="Позвонить по телефону" >+7 (499) 995-55-77</a>
         </li>
         <li class="footer__contact-item">
-          <i class="footer__icon footer__fas fas fa-envelope"></i>
-          <a class="footer__contact-link footer__mail" href="mailto:olanef9@gmail.com" aria-label="Написать письмо">dmitry@alekseev.com</a>
+          <i class="footer__icon footer__fa fa fa-envelope"></i>
+          <a class="footer__contact-link footer__mail" href="mailto:dmitry@alekseev.com" aria-label="Написать письмо">dmitry@alekseev.com</a>
         </li>
       </ul>
       
       <div class="footer__button-social">
         <button class="transparent-button call-order" aria-label="Заказать звонок">Заказать звонок</button>
 
-        <ul class="footer__social-network">
+         <ul class="footer__social-network">
           <li class="footer__item">
-            <a class="footer__network-link footer__vk" href="https://vk.com" title="ВКонтакте" aria-label="Перейти на сайт ВКонтакте"></a>
+            <a class="footer__network-link footer__vk" href=" https://vk.com/share.php?url=http://www.yefa.ru" title="ВКонтакте" target="_blank" rel="nofollow noopener noreferrer" aria-label="Перейти на сайт ВКонтакте"></a>
           </li>
           <li class="footer__item">
-            <a class="footer__network-link footer__fb" href="https://facebook.com" title="Facebook" aria-label="Перейти на сайт Facebook"></a>
+            <a class="footer__network-link footer__fb" href="https://www.facebook.com/sharer/sharer.php?u=http://www.yefa.ru" title="Facebook" target="_blank" rel="nofollow noopener noreferrer" aria-label="Перейти на сайт Facebook"></a>
           </li>
           <li class="footer__item">
-            <a class="footer__network-link footer__twitter" href="https://twitter.com" title="Twitter" aria-label="Перейти на сайт Twitter"></a>
+            <a class="footer__network-link footer__twitter" href="https://twitter.com/intent/tweet?text=http%3A//www.yefa.ru" title="Twitter" target="_blank" rel="nofollow noopener noreferrer" aria-label="Перейти на сайт Twitter"></a>
           </li>
           <li class="footer__item">
-            <a class="footer__network-link footer__instagram" href="https://instagram.com" title="Instagram" aria-label="Перейти на сайт Instagram"></a>
+            <a class="footer__network-link footer__instagram" href="https://instagram.com" title="Instagram" target="_blank" rel="nofollow noopener noreferrer" aria-label="Перейти на сайт Instagram"></a>
           </li>
         </ul>
       </div>
     </div>
     <p class="footer__copyright">© Дмитрий Алексеев, 2016 – 2018</p>
   </footer>
-  <script>new WOW().init();</script>
-</body>
+ 
+  <div class="popup-call-order">
+    <form class="popup-form animate__animated animate__backInDown" method="post" action="mail.php">
+      <button type="reset" class="popup-close" aria-label="Закрыть"></button>
+        <fieldset>
+          <legend>Заказать звонок</legend>
+          <ul class="popup-list" role="none">
+            <li class="popup-item">
+              <input class="popup-input" type="text" name="name" placeholder="Ваше имя" required>
+            </li>
+
+            <li class="popup-item">
+              <input class="popup-input" type="tel" name="phone" placeholder="Ваш номер телефона" required>
+            </li>
+          </ul>
+          <div class="popup-tag-box">
+            <span class="tag-hash">#</span>
+            <span class="tag-form">&lt;form&gt;</span>
+          </div>
+          <button type="submit" value="Отправить" class="popup-center-btn main-button popup-main-button">
+            Отправить
+          </button>
+          
+          <p class="privacy-policy">Нажимая на кнопку "Отправить", Вы даете 
+            <a target="_blank" href="http://www.yefa.ru/privacypolicy.pdf">
+            согласие на обработку своих персональных данных.
+            </a>
+          </p>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="popup-project-order">
+      <form class="popup-form animate__animated animate__backInDown" method="post" action="mail.php">
+        <button type="reset" class="popup-close" aria-label="Закрыть"></button>
+        <fieldset>
+          <legend>Заказать проект</legend>
+          <ul class="popup-list" role="none">
+            <li class="popup-item">
+              <input class="popup-input" type="text" name="name" placeholder="Ваше имя" required>
+            </li>
+
+            <li class="popup-item">
+              <input class="popup-input" type="tel" name="phone" placeholder="Ваш номер телефона" required>
+            </li>
+            
+            <li class="popup-item">
+              <input class="popup-input" type="email" name="email" placeholder="Ваша эл. почта">
+            </li>
+           </ul>
+          <div class="popup-tag-box">
+            <span class="tag-hash">#</span>
+            <span class="tag-form">&lt;form&gt;</span>
+          </div>
+          <button type="submit" value="Отправить" aria-label="Отправить" class="popup-center-btn main-button popup-main-button">
+            Отправить
+          </button>
+          <p class="privacy-policy">
+            Нажимая на кнопку "Отправить", Вы даете 
+            <a target="_blank" href="http://www.yefa.ru/privacypolicy.pdf">
+              согласие на обработку своих персональных данных.
+            </a>
+          </p>
+        </fieldset>
+      </form>
+    </div>
+ </body>
 </html>

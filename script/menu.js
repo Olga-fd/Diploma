@@ -53,7 +53,7 @@ $(function() {
 	burger.click(function() {
 		burger.toggleClass('close');
  		mobileMenu.toggleClass('active').animate({opacity: '1'},
-   	1500, "linear");
+   	600, "linear");
   	tag.toggleClass('visually-hidden');
 
    	if (mobileMenu.hasClass('active')) {
@@ -66,7 +66,7 @@ $(function() {
 	item.click(function() {
 
   	mobileMenu.toggleClass('active').animate({opacity: '1'},
-   	1500, "linear");
+   	600, "linear");
   	burger.removeClass('close');
   	enableScroll();
  	});
